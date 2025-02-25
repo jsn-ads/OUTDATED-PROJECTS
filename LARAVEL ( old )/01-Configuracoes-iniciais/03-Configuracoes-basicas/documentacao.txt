@@ -1,0 +1,3 @@
+criar chave de condificacao dentro do arquivo (.env)
+    - cd P1
+        -php artisan key:generate

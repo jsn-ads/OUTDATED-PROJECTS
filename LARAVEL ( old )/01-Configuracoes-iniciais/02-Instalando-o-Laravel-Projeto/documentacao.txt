@@ -1,0 +1,15 @@
+01-Instalando o laravel
+
+    cmd->
+
+        raiz do projeto instalar laravel apenas uma vez , apos isso e so criar projetos em outras pastas
+            - composer global require laravel/installer
+
+        caso peça extensao php.zip
+            - ir no arquivo php.ini dentro do arquivo descomentar php.zip
+        
+        criar um projeto
+            - laravel new Wcast
+        abrir o projeto
+            - cd Wcast
+                - php artisan serve

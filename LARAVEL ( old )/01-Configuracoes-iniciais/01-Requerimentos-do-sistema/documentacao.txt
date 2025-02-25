@@ -1,0 +1,15 @@
+PHP 7.2 +
+    - bcmath
+    - ctype
+    - json
+    - mbstring
+    - openssl
+    - pdo
+    - tokenizer
+    - xml
+
+    - WAMP
+    - XAMPP
+    - MAMP
+
+    -Homestead (Vagrant + VirtualBox/WMware)
