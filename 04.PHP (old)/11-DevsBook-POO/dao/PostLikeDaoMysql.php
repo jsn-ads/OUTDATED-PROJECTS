@@ -21,6 +21,19 @@ class PostLikeDaoMysql implements PostLikeDao
         return $data['c'];
     }
 
-    public function isLiked($id_post, $id_user) {}
+    public function isLiked($id_post, $id_user)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM post_likes WHERE id_post = :id_post AND id_user = :id_user");
+
+        $sql->bindValue(':id_post', $id_post);
+        $sql->bindValue(':id_user', $id_user);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     public function likeToggle($id_post, $id_user) {}
 }
