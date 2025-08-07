@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="./assets/js/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <br>
+        <div class="container-fluid">
+            <div id="app">
+                
+                <div class="form-group">
+                    <button class="btn btn-success" @click="status = !status">
+                        <i style="margin-left: 10px;" v-if="status">Visualizar Saldo<img src="./assets/img/hidden.png" style="width: 25px; margin-left: 5px;"></i>
+                        <i style="margin-left: 10px;" v-if="!status">Ocultar Saldo<img src="./assets/img/view.png" style="width: 25px; margin-left: 5px;"></i>
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <strong v-if="!status">R$ : {{valor}}</strong>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="form-group">
+                    <input id="idade" class="form-control" type="number" name="idade" placeholder="informe a idade" @blur="verificar()">
+                </div>
+
+                <div>
+                    <span v-if="dados == 0"></span>
+                    <span v-else-if="dados > 0 && dados < 18">menor de idade</span>
+                    <span v-else>maior de idade</span>
+                </div>
+
+            </div>
+        </div>
+    <br>
+
+    <script src="./assets/js/script.js" type="text/javascript"></script>
+    <script src="./assets/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#app{
+    width: 800px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+

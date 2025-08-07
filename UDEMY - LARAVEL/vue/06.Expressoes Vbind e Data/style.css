@@ -1,0 +1,29 @@
+#app{
+    width: 500px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.letras{
+    color: green;
+}
+
+.squad{
+    width: 200px;
+    height: 70px;
+}
+
+.fundo{
+    background-color: chartreuse;
+}
+
+.fundo2{
+    background-color: aquamarine;
+}
+
+.negrito{
+    font-weight: bold;
+}

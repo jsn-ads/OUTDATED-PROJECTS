@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+       <div class="a">
+            <div class="quad linha bola" :class='cor'>
+                X = {{x}}
+                Y = {{y}}
+            </div>
+       </div>
+       <div class="a">
+            <div class="mini linha bola c2" @click='alterar("c2")'></div>
+            <div class="mini linha bola c3" @mouseover='alterar("c3")' @mouseout='alterar("c1")'></div>
+            <div class="mini linha bola c4" @mousemove="coordenadas($event)"></div>
+       </div>
+    </div>
+
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>

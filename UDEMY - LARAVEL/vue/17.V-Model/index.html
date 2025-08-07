@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="./assets/js/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <br>
+        <div class="container-fluid">
+            <div id="app">
+                <div class="form-group">
+                    <div class="form-group">
+                        <input id="inputNome" class="form-control" type="text" name="inputNome" v-model="nome" placeholder="infome o nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">nome :  {{nome}}</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="m" v-model="sexo">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Masculino
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="f" v-model="sexo">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Feminino
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">sexo :  {{sexo}}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" v-model="curso">
+                            <option value="" disabled>Selecione Curso</option>
+                            <option value="laravel">LARAVEL</option>
+                            <option value="vue">VUE</option>
+                            <option value="bootstrap">BOOTSTRAP</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">curso :  {{curso}}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">Eletronicos que possui em casa </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="tv" v-model="eletronicos">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          TV
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="notebook" v-model="eletronicos">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          NOTEBOOK
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="geladeira" v-model="eletronicos">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          GELADEIRA
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="dvd" v-model="eletronicos">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          DVD
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">Eletronicos :  {{eletronicos}}</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="my-textarea">Redação : </label>
+                        <textarea id="my-textarea" class="form-control" name="" rows="3" v-model="redacao"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="my-input">Redação :  {{redacao}}</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <br>
+
+    <script src="./assets/js/script.js" type="text/javascript"></script>
+    <script src="./assets/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
