@@ -12,6 +12,7 @@
                     item.innerText = --count;
                 }
 
+                // esta linha esta responsavel por não visualizar os corações e vermelho verificar
                 fetch('ajax_like.php?id='+id);
             });
         });

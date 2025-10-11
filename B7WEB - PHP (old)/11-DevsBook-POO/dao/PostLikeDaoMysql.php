@@ -35,5 +35,17 @@ class PostLikeDaoMysql implements PostLikeDao
             return false;
         }
     }
-    public function likeToggle($id_post, $id_user) {}
+    public function likeToggle($id_post, $id_user) {
+        if($this->isLiked($id_post, $id_user)){
+            //Delete
+            $sql = $this->pdo->prepare("DELETE FROM post_likes WHERE id_post = :id_post AND id_user = :id_user");
+        }else{
+            //Inserir
+            $sql = $this->pdo->prepare("INSERT INTO post_likes (id_post, id_user, created_at) VALUES (:id_post, :id_user, NOW())");
+        }
+    
+        $sql->bindValue(':id_post',$id_post);
+        $sql->bindValue(':id_user',$id_user);
+        $sql->execute();
+    }
 }
