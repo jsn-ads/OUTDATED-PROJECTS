@@ -16,7 +16,7 @@
 
 
 -- Copiando estrutura do banco de dados para devsbook
-CREATE DATABASE IF NOT EXISTS `devsbook` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE IF NOT EXISTS `devsbookpoo` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `devsbook`;
 
 -- Copiando estrutura para tabela devsbook.posts
@@ -84,8 +84,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `birth_date` date NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `birthdate` date NOT NULL,
   `city` varchar(100) DEFAULT NULL,
   `work` varchar(100) DEFAULT NULL,
   `avatar` varchar(100) DEFAULT 'avatar.jpg',
