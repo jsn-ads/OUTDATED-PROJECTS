@@ -99,6 +99,7 @@ class PostDaoMysql implements PostDAO
     private function _postListToObject($post_list, $id_user)
     {
 
+        $posts = [];
         $userDao = new UserDaoMysql($this->pdo);
         $postLikeDao = new PostLikeDaoMysql($this->pdo);
 
@@ -119,13 +120,15 @@ class PostDaoMysql implements PostDAO
 
             //Informações sobre LIKE]
             $n->likeCount = $postLikeDao->getLikeCount($n->id);
-            $n->liked = $postLikeDao->isLiked($n->id, $n->id_user);
+            // print_r($n->id, $n->id_user);
+            $n->liked = $postLikeDao->isLiked($n->id, $id_user);
 
             //Informaçoes sobre COMMENTS
             $n->comments = [];
 
             $posts[] = $n;
         }
+            
         return $posts;
     }
 }
