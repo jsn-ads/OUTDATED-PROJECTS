@@ -2,7 +2,7 @@
 
 session_start();
 
-$base = 'http://localhost/PROJETOS/OUTDATED-PROJECTS\B7WEB - PHP (old)\11-DevsBook-POO';
+$base = 'http://localhost/PROJETOS/OUTDATED-PROJECTS/B7WEB - PHP (old)/11-DevsBook-POO';
 
 $db_name = 'devsbookpoo';
 $db_host = '127.0.0.1';
