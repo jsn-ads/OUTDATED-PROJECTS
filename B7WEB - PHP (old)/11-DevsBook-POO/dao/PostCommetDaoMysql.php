@@ -1,5 +1,6 @@
 <?php
 require_once 'models/PostComment.php';
+require_once 'dao/UserDaoMysql.php';
 
 class PostCommetDaoMysql implements PostCommentDao
 {
@@ -32,7 +33,9 @@ class PostCommetDaoMysql implements PostCommentDao
         $sql->execute();
 
         if ($sql->rowCount() > 0) {
+
             $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $userDao = new UserDaoMysql($this->pdo);
 
             foreach ($data as $item) {
                 $pc = new PostComment();
@@ -41,6 +44,7 @@ class PostCommetDaoMysql implements PostCommentDao
                 $pc->id_user = $item['id_user'];
                 $pc->created_at = $item['created_at'];
                 $pc->body = $item['body'];
+                $pc->user = $userDao->findById($item['id_user']);
 
                 $comments[] = $pc;
             }
